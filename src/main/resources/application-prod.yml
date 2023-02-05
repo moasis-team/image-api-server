@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: ${DRIVER_CLASS_NAME}
+    url: jdbc:${DB}://${HOST}:${PORT}/${NAME}?createDatabaseIfNotExist=true
+    username: ${USER}
+    password: ${PASSWORD}
+
+  jpa:
+    open-in-view: true
+    show-sql: true
+    hibernate:
+      ddl-auto: ${DDL-AUTO}
+    database-platform: ${DIALECT}
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: ${TIME_ZONE}
+  servlet:
+    multipart:
+      maxFileSize: ${MAX}
+      maxRequestSize: ${MAX}
